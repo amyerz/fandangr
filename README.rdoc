@@ -1,3 +1,15 @@
+==Fandangr App
+
+Overview: An application that allows users to browse movies, and then "purchase" tickets to specific showings. Tickets for a showing will have seat assignments, too! (This is a fancy theater.) Create a repo for this project with the following Milestones (you add Issues to the Milestones as you see fit - at least one, ideally several):
+
+Models: Write a spec for the application. Write tests for that spec using RSpec. Make sure you test for the associations between models as well. Then build models such that your tests pass. You could cheat and write your models first if you want. But the value of this milestone is the struggle of reframing how we think about building applications.
+Seed and Basic Functionality: Seed movies and tickets and create functionality for people to browse by movie.
+User Auth and Advanced Functionality: Add user authentication and functionality that allows users to purchase a certain number of seats per movie. A user's profile page should show all tickets (including date/time and the movie). Obviously, if a user is not signed in then they cannot purchase tickets.
+Dynamic Seating Chart: Create a dynamic seating chart to the purchase functionality that allows a user to simply click the seats they'd like to purchase. When viewing a movie showing's page, a user should see a list of all tickets - organized into some kind of grid/chart representing the seat number (e.g. A1, A2, B1, B2, or whatever). Clicking a ticket will buy that ticket (a.k.a. seat). Tickets that have already been bought still show up, but they cannot be clicked. After building the basic functionality for this, make it work with AJAX (a.k.a. remote:true), so that clicking a seat doesn't require a page-refresh to buy the ticket. And the seating chart should refresh upon new ticket purchase.
+(Bonus) Add Admin Functionality: Admins should be able to add/edit/delete movies/users/tickets.
+(Bonus) Add Movie Info: Use whatever gems/APIs you'd like to add movie information to each movie, allow users to see the trailer and ratings, etc.
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
