@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  showing_id: 1
+  user_id: 1
+  row: MyString
+  column: 1
+
+two:
+  showing_id: 1
+  user_id: 1
+  row: MyString
+  column: 1
