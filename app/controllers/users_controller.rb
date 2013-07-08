@@ -43,7 +43,9 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     respond_to do |format|
+
       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to @user, notice: 'Thank you for signing up.' }
         format.json { render json: @user, status: :created, location: @user }
       else
