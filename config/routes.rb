@@ -1,4 +1,6 @@
 Fandangr::Application.routes.draw do
+  get "password_resets/new"
+
   get 'signup', to:'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -15,6 +17,7 @@ Fandangr::Application.routes.draw do
 
   resources :movies
 
+  resources :password_resets
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
