@@ -1,4 +1,6 @@
 Fandangr::Application.routes.draw do
+  get "sessions/new"
+
   resources :showings
 
 
