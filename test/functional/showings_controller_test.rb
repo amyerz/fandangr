@@ -18,7 +18,7 @@ class ShowingsControllerTest < ActionController::TestCase
 
   test "should create showing" do
     assert_difference('Showing.count') do
-      post :create, showing: { datetime: @showing.datetime, movie_id: @showing.movie_id }
+      post :create, showing: { movie_id: @showing.movie_id, time: @showing.time }
     end
 
     assert_redirected_to showing_path(assigns(:showing))
@@ -35,7 +35,7 @@ class ShowingsControllerTest < ActionController::TestCase
   end
 
   test "should update showing" do
-    put :update, id: @showing, showing: { datetime: @showing.datetime, movie_id: @showing.movie_id }
+    put :update, id: @showing, showing: { movie_id: @showing.movie_id, time: @showing.time }
     assert_redirected_to showing_path(assigns(:showing))
   end
 

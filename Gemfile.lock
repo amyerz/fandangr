@@ -47,6 +47,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    fandango (1.0.0)
+      nokogiri (~> 1.0)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -58,7 +60,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
+    mini_portile (0.5.0)
     multi_json (1.7.7)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     pg (0.15.1)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -114,6 +119,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   better_errors
   coffee-rails (~> 3.2.1)
+  fandango
   jquery-rails
   pg
   rails (= 3.2.13)

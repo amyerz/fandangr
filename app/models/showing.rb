@@ -1,5 +1,5 @@
 class Showing < ActiveRecord::Base
-  belongs_to :movie
   has_many :tickets
-  attr_accessible :datetime, :movie_id
+  belongs_to :movie
+  attr_accessible :movie_id, :time
 end

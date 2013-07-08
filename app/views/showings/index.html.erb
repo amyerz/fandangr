@@ -11,8 +11,8 @@
 
 <% @showings.each do |showing| %>
   <tr>
-    <td><%= showing.movie_id %></td>
-    <td><%= showing.datetime %></td>
+    <td><%= showing.movie.name %></td>
+    <td><%= showing.time %></td>
     <td><%= link_to 'Show', showing %></td>
     <td><%= link_to 'Edit', edit_showing_path(showing) %></td>
     <td><%= link_to 'Destroy', showing, method: :delete, data: { confirm: 'Are you sure?' } %></td>

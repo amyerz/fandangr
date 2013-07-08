@@ -1,11 +1,11 @@
 Fandangr::Application.routes.draw do
+  resources :showings
+
+
   resources :tickets
 
 
   resources :users
-
-
-  resources :showings
 
 
   resources :movies
