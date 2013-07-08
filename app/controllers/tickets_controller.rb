@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_filter :authorize, only:[:new]
+  before_filter :authorize
   # GET /tickets
   # GET /tickets.json
   def index

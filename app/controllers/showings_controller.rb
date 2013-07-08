@@ -1,4 +1,6 @@
 class ShowingsController < ApplicationController
+  before_filter :authorize, :except => [:index]
+
   # GET /showings
   # GET /showings.json
   def index
@@ -14,6 +16,16 @@ class ShowingsController < ApplicationController
   # GET /showings/1.json
   def show
     @showing = Showing.find(params[:id])
+
+    @availableTickets = []
+    @tickets = {}
+    @showing.tickets.each do |current_ticket|
+      seat_nmbr = current_ticket.row + current_ticket.column.to_s;
+
+      @tickets[seat_nmbr] = current_ticket.id
+      @availableTickets.push(seat_nmbr) if current_ticket.user_id == nil
+    end
+
 
     respond_to do |format|
       format.html # show.html.erb

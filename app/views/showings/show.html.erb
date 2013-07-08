@@ -1,3 +1,4 @@
+<% javascript 'showings_show' %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -13,3 +14,28 @@
 
 <%= link_to 'Edit', edit_showing_path(@showing) %> |
 <%= link_to 'Back', showings_path %>
+
+<table border id="seat_chart" data-user="<%= current_user.id %>">
+	<tr>
+		<td></td>
+		<% (1..10).each do |col| %>
+		<td><%= col.to_s %></td>
+		<% end %>
+	</tr>
+
+	<% ('A'..'G').each do |row| %>
+	<tr>
+		<td><%= row %></td>
+		<% (1..10).each do |col| %>
+		<td id="<%= row + col.to_s %>" class="seat
+			<% if @availableTickets.include?(row + col.to_s) %>
+				<%= ' seat-available' %>
+			<% else %>
+				<%= ' seat-sold' %>
+			<% end %>
+			" data-ticket="<%= @tickets[row + col.to_s] %>"></td>
+		<% end %>
+	</tr>
+	<% end %>
+</table>
+
