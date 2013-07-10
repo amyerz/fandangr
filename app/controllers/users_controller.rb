@@ -10,6 +10,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def profile
+    user_id = current_user.id
+
+    respond_to do |format|
+      format.html { redirect_to user_path(id:user_id) }
+      format.json { head :no_content }
+    end
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show
@@ -40,6 +49,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    
     @user = User.new(params[:user])
 
     respond_to do |format|
